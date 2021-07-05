@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const HeaderContainer = styled.div`
@@ -22,23 +22,14 @@ const OptionsContainer = styled.div`
     justify-content: flex-end;
 `;
 
-const OptionContainerStyles = css`
+const OptionLink = styled(Link)`
     padding: 10px 15px;
     cursor: pointer;
-`;
-
-const OptionLink = styled(Link)`
-    ${OptionContainerStyles}
-`;
-
-const OptionDiv = styled.div`
-    ${OptionContainerStyles}
 `;
 
 export {
     HeaderContainer,
     LogoContainer,
     OptionsContainer,
-    OptionLink,
-    OptionDiv
+    OptionLink
 };
