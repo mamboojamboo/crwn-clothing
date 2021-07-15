@@ -1,6 +1,10 @@
 {
     "name": "crwn-clothing-server",
     "version": "1.0.0",
+    "engines": {
+        "node": "16.3.0",
+        "npm": "16.3.0"
+    },
     "scripts": {
       "client": "cd client && yarn start",
       "server": "nodemon server.js",
