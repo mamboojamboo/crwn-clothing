@@ -13,7 +13,7 @@ import Header from './components/header/header.component';
 import { checkUserSession } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
 
-import GlobalStyles from './globalStyles';
+import GlobalStyles from './global.styles';
 
 
 
@@ -25,19 +25,19 @@ const App = ({ checkUserSession, currentUser }) => {
 
   return (
     <div>
-        <GlobalStyles />
-        <Header />
-        <Switch>
-          <Route exact path='/' component={HomePage}/>
-          <Route path='/shop' component={ShopPage}/>
-          <Route exact path='/checkout' component={CheckoutPage}/>
-          <Route
-            exact
-            path='/signin'
-            render={() => 
-              currentUser ? (<Redirect to='/' />) : (<SignInAndSignUpPage/>)}
-          />
-        </Switch>
+      <GlobalStyles />
+      <Header />
+      <Switch>
+        <Route exact path='/' component={HomePage} />
+        <Route path='/shop' component={ShopPage} />
+        <Route exact path='/checkout' component={CheckoutPage} />
+        <Route
+          exact
+          path='/signin'
+          render={() =>
+            currentUser ? (<Redirect to='/' />) : (<SignInAndSignUpPage />)}
+        />
+      </Switch>
     </div>
   );
 }
